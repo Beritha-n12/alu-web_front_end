@@ -146,6 +146,7 @@ html {
     display: none;
   }
   /*# sourceMappingURL=normalize.min.css.map */
+  
   :root {
     --color-primary: #d73953;
     --color-black: #090909;
@@ -155,7 +156,7 @@ html {
     --text-color: var(--color-black);
     --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial,
       sans-serif;
-    --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-title: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-size-small: 1.2rem;
     --font-size-medium: 1.6rem;
     --font-size-large: 1.8rem;
@@ -177,6 +178,14 @@ html {
     font-size: 62.5%;
   }
   
+  body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+  }
+  
   h1,
   h2,
   h3,
@@ -187,29 +196,15 @@ html {
     font-weight: var(--font-weight-bold);
   }
   
-  body {
-    font-size: var(--font-size-medium);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-base);
-  }
-  
-  body,
-  a {
-    color: var(--text-color);
-    font-family: var(--font-family-base);
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
   a:link {
-    font-style: italic;
+    color: var(--text-color);
+    text-decoration: none;
   }
   
   a:visited {
     font-style: italic;
   }
+  
   a:hover {
     text-decoration: underline;
   }
@@ -218,17 +213,16 @@ html {
     background-color: var(--color-light-grey);
   }
   
-  .visual-hidden {
+  .visually-hidden {
     display: none;
+  }
+  
+  .card-category {
+    color: var(--color-primary);
   }
   
   .section-header {
     text-align: var(--section-header-align);
-  }
-  
-  .card-category,
-  .section-tagline {
-    color: var(--color-primary);
   }
   
   .section-title {
@@ -238,7 +232,9 @@ html {
     margin: var(--section-title-margin);
     color: var(--section-title-color);
   }
+  
   .section-tagline {
+    color: var(--color-primary);
     font-family: var(--font-family-title);
     text-transform: var(--section-tagline-transform);
     font-weight: var(--font-weight-bold);
